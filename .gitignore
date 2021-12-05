@@ -24,3 +24,10 @@ hs_err_pid*
 
 # IntelliJ
 *.idea
+
+# DB
+*.mv.db
+
+# application.properties
+*.properties
+
