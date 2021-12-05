@@ -25,9 +25,10 @@ hs_err_pid*
 # IntelliJ
 *.idea
 
-# DB
-*.mv.db
 
-# application.properties
-*.properties
+# application.properties and DB
+src/main/resources/
+
+# target fodler
+/target
 
