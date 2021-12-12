@@ -32,3 +32,9 @@ src/main/resources/
 # target fodler
 /target
 
+#node modules
+/node_modules
+
+#DB
+*.mv.db
+*.db
