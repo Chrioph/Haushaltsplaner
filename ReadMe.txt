@@ -1,10 +1,11 @@
 Git Workflow:
 
-1.  New Branch from development
+1.  New branch from development
 2.  Implement your task
-3.  Merge Branch back to development
-4.  Test on development
-5.  Merge with production
+3.  Merge branch back to development
+4.  Delete branch
+5.  Test on development
+6.  Merge with production
 
 
 Start DB:
