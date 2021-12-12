@@ -37,3 +37,4 @@ src/main/resources/
 
 #DB
 *.mv.db
+*.db
