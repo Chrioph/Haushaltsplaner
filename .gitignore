@@ -34,3 +34,6 @@ src/main/resources/
 
 #node modules
 /node_modules
+
+#DB
+*.mv.db

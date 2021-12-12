@@ -7,7 +7,7 @@ import java.util.List;
 public class User {
     @Id @GeneratedValue(strategy = GenerationType.AUTO) Long id;
     String username;
-    @OneToMany
+    @ManyToMany
     List<Household> households;
     String email;
     String password;

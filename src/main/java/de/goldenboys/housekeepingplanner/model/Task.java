@@ -14,7 +14,7 @@ public class Task {
     LocalDateTime startTime;
     int duration;
     Repition repition;
-    @OneToOne
+    @ManyToOne
     User assignedTo;
 
 }

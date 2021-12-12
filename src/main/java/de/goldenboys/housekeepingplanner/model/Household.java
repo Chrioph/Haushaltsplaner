@@ -1,13 +1,13 @@
 package de.goldenboys.housekeepingplanner.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Household {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     String name;
+    @ManyToMany
+    List<User> users;
 }
