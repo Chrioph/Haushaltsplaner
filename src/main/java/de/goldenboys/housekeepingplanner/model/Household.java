@@ -10,4 +10,13 @@ public class Household {
     String name;
     @ManyToMany
     List<User> users;
+
+    public Household(String name, List<User> users) {
+        this.name = name;
+        this.users = users.stream().toList();
+    }
+
+    public Household() {
+
+    }
 }

@@ -17,4 +17,16 @@ public class Task {
     @ManyToOne
     public User assignedTo;
 
+    public Task(String title, String description, LocalDateTime startTime, int duration, Repitition repitition, User user) {
+        this.title = title;
+        this.description = description;
+        this.startTime = startTime;
+        this.duration = duration;
+        this.repitition = repitition;
+        this.assignedTo = user;
+    }
+
+    public Task() {
+
+    }
 }
