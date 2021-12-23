@@ -1,6 +1,6 @@
 package de.goldenboys.housekeepingplanner.model;
 
-import de.goldenboys.housekeepingplanner.enums.Repition;
+import de.goldenboys.housekeepingplanner.enums.Repitition;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -13,7 +13,7 @@ public class Task {
     public String description;
     public LocalDateTime startTime;
     public int duration;
-    public Repition repition;
+    public Repitition repitition;
     @ManyToOne
     public User assignedTo;
 
