@@ -8,13 +8,13 @@ import java.time.LocalDateTime;
 @Entity
 public class Task {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
-    String title;
-    String description;
-    LocalDateTime startTime;
-    int duration;
-    Repition repition;
+    public Long id;
+    public String title;
+    public String description;
+    public LocalDateTime startTime;
+    public int duration;
+    public Repition repition;
     @ManyToOne
-    User assignedTo;
+    public User assignedTo;
 
 }
