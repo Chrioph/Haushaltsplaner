@@ -4,7 +4,7 @@ Web Application for managing household tasks and budget
 Initialize Project:
 - Get NodeJs, Git, Java (for running the DB jar file) and (preferably) IntelliJ
 - Clone the repository from Github
-- In the IntellJ Terminal (bottom) go to the frontend folder and execute "npm install"
+- In the IntellJ Terminal (bottom) go to the frontend and mobileFrontend folder and execute "npm install"
 - Go to the pom.xml and press Strg + Shift + O to resolve the project dependencies
 - in the directory src/main in the resources folder, create a file "application.properties"
 - Add following entries to the created file
