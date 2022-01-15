@@ -27,7 +27,6 @@ hs_err_pid*
 
 
 # application.properties and DB
-src/main/resources/
 *.properties
 src/main/resources/application.properties
 
