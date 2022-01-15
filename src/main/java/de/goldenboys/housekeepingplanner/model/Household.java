@@ -6,10 +6,10 @@ import java.util.List;
 @Entity
 public class Household {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
-    String name;
+    public Long id;
+    public String name;
     @ManyToMany
-    List<User> users;
+    public List<User> users;
 
     public Household(String name, List<User> users) {
         this.name = name;

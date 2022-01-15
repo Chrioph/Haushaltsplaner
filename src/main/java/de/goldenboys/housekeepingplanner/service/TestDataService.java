@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import java.beans.Transient;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,8 +46,9 @@ public class TestDataService {
 
     private void createFakeUsers(Faker faker, int count) {
         for(int i = 0; i < count; i++) {
-            User user = new User(faker.name().username(), UUID.randomUUID().toString(),
-                    faker.name().firstName() + "." + faker.name().lastName() + "@gmail.com");
+            User user = new User(faker.name().username(),
+                    faker.name().firstName() + "." + faker.name().lastName() + "@gmail.com",
+                    UUID.randomUUID().toString());
             users.add(user);
             userRepository.save(user);
         }
@@ -66,13 +68,21 @@ public class TestDataService {
     private void createFakeTasks(Faker faker, List<User> users) {
         for(User user: users){
             for (int i = 0; i < 4; i++) {
+                int householdNum = faker.random().nextInt(0, Math.max(0, households.size()-1));
+                List<Household> households = householdRepository.findAllByUsersContaining(user);
+                Household household = null;
+                if (!households.isEmpty()) {
+                    household = households.get(faker.random().nextInt(0, households.size() - 1));
+                }
                 Task task = new Task(
                         faker.ancient().hero(),
                         faker.demographic().demonym(),
                         LocalDateTime.now(),
                         faker.random().nextInt(90),
                         randomRepitition(),
-                        user);
+                        user,
+                        household
+                        );
                 tasks.add(task);
                 taskRepository.save(task);
             }

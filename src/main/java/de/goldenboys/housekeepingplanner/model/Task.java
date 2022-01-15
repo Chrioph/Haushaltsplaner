@@ -16,14 +16,18 @@ public class Task {
     public Repitition repitition;
     @ManyToOne
     public User assignedTo;
+    @ManyToOne
+    public Household household;
 
-    public Task(String title, String description, LocalDateTime startTime, int duration, Repitition repitition, User user) {
+    public Task(String title, String description, LocalDateTime startTime, int duration, Repitition repitition,
+                User user, Household household) {
         this.title = title;
         this.description = description;
         this.startTime = startTime;
         this.duration = duration;
         this.repitition = repitition;
         this.assignedTo = user;
+        this.household = household;
     }
 
     public Task() {

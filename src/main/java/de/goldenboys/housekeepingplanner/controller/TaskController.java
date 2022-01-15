@@ -1,7 +1,9 @@
 package de.goldenboys.housekeepingplanner.controller;
 
+import de.goldenboys.housekeepingplanner.model.Household;
 import de.goldenboys.housekeepingplanner.model.Task;
 import de.goldenboys.housekeepingplanner.model.User;
+import de.goldenboys.housekeepingplanner.repository.HouseholdRepository;
 import de.goldenboys.housekeepingplanner.repository.TaskRepository;
 import de.goldenboys.housekeepingplanner.repository.UserRepository;
 import org.springframework.http.HttpStatus;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -17,10 +20,12 @@ import java.util.Optional;
 public class TaskController {
     private final TaskRepository taskRepository;
     private final UserRepository userRepository;
+    private final HouseholdRepository householdRepository;
 
-    public TaskController(TaskRepository tr, UserRepository ur) {
+    public TaskController(TaskRepository tr, UserRepository ur, HouseholdRepository hr) {
         this.taskRepository = tr;
         this.userRepository = ur;
+        this.householdRepository = hr;
     }
 
     @PostMapping
@@ -31,7 +36,7 @@ public class TaskController {
     }
 
     @GetMapping
-    public Iterable<Task> getProfiles() {
+    public Iterable<Task> getTasks() {
         return taskRepository.findAll();
     }
 
@@ -53,9 +58,19 @@ public class TaskController {
         return taskRepository.findAllByAssignedTo(maybeUser.get());
     }
 
+    @GetMapping("/household/{householdId}")
+    public Iterable<Task> getTasksByHousehold(@PathVariable Long householdId) {
+        Optional<Household> maybeHousehold = householdRepository.findById(householdId);
+        if(maybeHousehold.isEmpty()) {
+            return Collections.emptyList();
+        }
+        return taskRepository.findAllByHousehold(maybeHousehold.get());
+    }
+
     @DeleteMapping("/{id}")
-    public void deleteTaskById(@PathVariable Long id) {
+    public ResponseEntity deleteTaskById(@PathVariable Long id) {
         taskRepository.deleteById(id);
+        return ResponseEntity.ok().build();
     }
 
     @PutMapping("/{id}")
