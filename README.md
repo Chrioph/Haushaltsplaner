@@ -29,12 +29,21 @@ Start DB:
     password: hpotsirhc
 
 
-Start Frontend:
+Start Web Frontend:
 
-New run configuration -> npm -> command: run
+New run configuration -> npm -> package.json in frontend directory -> 
+command: run
 or
 Go to Terminal in IntelliJ (bottom) -> change folder to frontend -> type "npm run"
 Note: Maybe you have to run "npm install" first to install new/initial npm modules
+
+Start Mobile Frontend:
+
+New run configuration -> npm -> package.json in mobileFrontend directory ->
+command: run
+or
+Go to Terminal in IntelliJ (bottom) -> change folder to mobileFrontend -> type "npm run"
+
 
 
 Start Backend:

@@ -28,6 +28,7 @@ hs_err_pid*
 
 # application.properties and DB
 src/main/resources/
+*.properties
 
 # target fodler
 /target
