@@ -23,7 +23,7 @@ export default function AddTask() {
                        value={name}
                        placeholder="Task name"
                        onChange={handleNameChange}
-                       style={{width: "85vw"}}
+                       style={{width: "90vw"}}
                 />
             </div>
             <div className="input-group-prepend">
@@ -34,7 +34,7 @@ export default function AddTask() {
                        value={description}
                        placeholder="Description"
                        onChange={handleDescChange}
-                       style={{width: "85vw"}}
+                       style={{width: "90vw"}}
                 />
             </div>
             <button type="submit" className="btn btn-primary formElement">Submit</button>
