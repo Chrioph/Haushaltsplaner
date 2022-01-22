@@ -6,17 +6,19 @@ Initialize Project:
 - Clone the repository from Github
 - In the IntellJ Terminal (bottom) go to the frontend and mobileFrontend folder and execute "npm install"
 - Go to the pom.xml and press Strg + Shift + O to resolve the project dependencies
-- in the directory src/main in the resources folder, create a file "application.properties"
+- in the directory src/main create the resources folder,in there, create a file "application.properties"
 - Add following entries to the created file
 
   `spring.datasource.url=jdbc:h2:"projectlocation"/src/main/resources/Haushaltsplaner`
 
-  `spring.datasource.username=ch`
+  `spring.datasource.username="username"`
 
-  `spring.datasource.password=hpotsirhc`
+  `spring.datasource.password="password"`
 
   `spring.jpa.hibernate.ddl-auto = create`
-
+- in the H2 UI (accessed through tray icon) create a db with the name "Haushaltsplaner" in the resources folder.
+- change the username and password entries in the application.properties according to the values you entered at the
+ DB creation (without "")
 
 Git Workflow:
 

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.net.URI;
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://localhost:3000/")
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
@@ -40,7 +41,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity deleteUserById(@PathVariable Long id){
+    public ResponseEntity deleteUserById(@PathVariable Long id) {
         userRepository.deleteById(id);
         return ResponseEntity.ok().build();
     }

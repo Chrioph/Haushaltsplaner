@@ -13,30 +13,31 @@ export default function AddTask() {
     }
 
     return (
-        <div>
-            <form method="post">
-                <div className="form-group">
-                    <label className="formElement">Task Name</label>
-                    <input type="text" id="task-name"
-                           className="form-control formElement"
-                           name="Task Name"
-                           value={name}
-                           placeholder="Task name"
-                           onChange={handleNameChange}
-                    />
-                </div>
-                <div className="input-group-prepend">
-                    <label className="formElement">Description</label>
-                    <input type="text" id="task-desc"
-                           className="form-control formElement"
-                           name="Task Description"
-                           value={description}
-                           placeholder="Description"
-                           onChange={handleDescChange}
-                    />
-                </div>
-                <button type="submit" className="btn btn-primary formElement">Submit</button>
-            </form>
-        </div>
+        <form method="post" className="section">
+            <h4>Create new task</h4>
+            <div className="form-group">
+                <label className="formElement">Task Name</label>
+                <input type="text" id="task-name"
+                       className="form-control formElement"
+                       name="Task Name"
+                       value={name}
+                       placeholder="Task name"
+                       onChange={handleNameChange}
+                       style={{width: "25vw"}}
+                />
+            </div>
+            <div className="input-group-prepend">
+                <label className="formElement">Description</label>
+                <input type="text" id="task-desc"
+                       className="form-control formElement"
+                       name="Task Description"
+                       value={description}
+                       placeholder="Description"
+                       onChange={handleDescChange}
+                       style={{width: "25vw"}}
+                />
+            </div>
+            <button type="submit" className="btn btn-primary formElement">Submit</button>
+        </form>
     );
 }
