@@ -14,7 +14,7 @@ import java.net.URI;
 import java.util.Collections;
 import java.util.Optional;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin
 @RestController
 @RequestMapping("/api/tasks")
 public class TaskController {

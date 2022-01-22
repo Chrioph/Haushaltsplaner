@@ -35,8 +35,6 @@ src/main/resources/application.properties
 # target fodler
 /target
 
-#node modules
-/node_modules
 
 #DB
 *.mv.db
