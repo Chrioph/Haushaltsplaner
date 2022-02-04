@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-export default function AddTask() {
+export default function AddTaskComponent() {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
 
