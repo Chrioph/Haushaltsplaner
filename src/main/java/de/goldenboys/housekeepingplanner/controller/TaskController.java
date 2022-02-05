@@ -14,7 +14,7 @@ import java.net.URI;
 import java.util.Collections;
 import java.util.Optional;
 
-@CrossOrigin(origins = "http://localhost:3000/")
+@CrossOrigin
 @RestController
 @RequestMapping("/api/tasks")
 public class TaskController {
@@ -35,7 +35,6 @@ public class TaskController {
         return ResponseEntity.created(URI.create("/tasks/" + task.id)).body(task);
     }
 
-    @CrossOrigin(origins = "http://localhost:8080")
     @GetMapping
     public Iterable<Task> getTasks() {
         return taskRepository.findAll();
