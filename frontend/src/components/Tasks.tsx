@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {getTasks} from "../services/TaskService";
+import AddTaskComponent from "./AddTaskComponent";
 
 export default function Tasks() {
     const [tasks, setTasks] = useState([]);
@@ -18,6 +19,8 @@ export default function Tasks() {
         <div>
             <h4>Tasks</h4>
             {taskElements}
+            <h3>Add task</h3>
+            <AddTaskComponent/>
         </div>
     )
 
