@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {getTasks} from "../services/TaskService";
 import AddTaskComponent from "./AddTaskComponent";
 
-export default function Tasks() {
+export default function TaskComponent() {
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {

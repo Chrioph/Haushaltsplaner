@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Tasks from "./components/Tasks";
+import TaskComponent from "./components/TaskComponent";
 import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
 import WeeklyOverviewComponent from "./components/WeeklyOverviewComponent";
 import HouseholdOverviewComponent from "./components/HouseholdOverviewComponent";
@@ -20,7 +20,7 @@ function App() {
                     <Route path="/home" element={<WeeklyOverviewComponent/>}/>
                     <Route path="/household" element={<HouseholdOverviewComponent/>}/>
                     <Route path="/profile" element={<ProfileOverviewComponent/>}/>
-                    <Route path="/all-tasks" element={<Tasks/>}/>
+                    <Route path="/all-tasks" element={<TaskComponent/>}/>
                 </Routes>
             </Router>
         </>
