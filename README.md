@@ -1,10 +1,13 @@
 # Haushaltsplaner
+
 Web Application for managing household tasks and budget
 
 Initialize Project:
+
 - Get NodeJs, Git, Java (for running the DB jar file) and (preferably) IntelliJ
 - Clone the repository from Github
-- In the IntellJ Terminal (bottom) go to the frontend and mobileFrontend folder and execute "npm install"
+- In the IntellJ Terminal (bottom) go to the frontend and mobileFrontend folder and execute "npm install" and "npm
+  install -g npm-install-missing"
 - Go to the pom.xml and press Strg + Shift + O to resolve the project dependencies
 - in the directory src/main create the resources folder,in there, create a file "application.properties"
 - Add following entries to the created file
@@ -17,46 +20,36 @@ Initialize Project:
 
   `spring.jpa.hibernate.ddl-auto = create`
 - in the H2 UI (accessed through tray icon) create a db with the name "Haushaltsplaner" in the resources folder.
-- change the username and password entries in the application.properties according to the values you entered at the
- DB creation (without "")
+- change the username and password entries in the application.properties according to the values you entered at the DB
+  creation (without "")
 
 Git Workflow:
 
-1.  New branch from development with name #<task_number>: <short_description>
-2.  Implement your task
-3.  Merge branch back to development
-4.  Delete branch
-5.  Test on development
-6.  Merge with production
-    Note: main branch shall not be used
-
+1. New branch from development with name #<task_number>: <short_description>
+2. Implement your task
+3. Merge branch back to development
+4. Delete branch
+5. Test on development
+6. Merge with production Note: main branch shall not be used
 
 Start DB:
 
-1.  Go to %USER_PROFILE%/<username>/.m2/repository/com/h2database/h2/1.4.200
-2.  Execute h2-1.4.200.jar
-3.  To log into web interface:
-    DB:  jdbc:h2:<Path to IntelliJ project>\Haushaltsplaner\src\main\resources\Haushaltsplaner
-    user: ch
-    password: hpotsirhc
-
+1. Go to %USER_PROFILE%/<username>/.m2/repository/com/h2database/h2/1.4.200
+2. Execute h2-1.4.200.jar
+3. To log into web interface:
+   DB:  jdbc:h2:<Path to IntelliJ project>\Haushaltsplaner\src\main\resources\Haushaltsplaner user: ch password:
+   hpotsirhc
 
 Start Web Frontend:
 
-New run configuration -> npm -> package.json in frontend directory -> 
-command: run
-or
-Go to Terminal in IntelliJ (bottom) -> change folder to frontend -> type "npm run"
+New run configuration -> npm -> package.json in frontend directory ->
+command: run or Go to Terminal in IntelliJ (bottom) -> change folder to frontend -> type "npm run"
 Note: Maybe you have to run "npm install" first to install new/initial npm modules
 
 Start Mobile Frontend:
 
 New run configuration -> npm -> package.json in mobileFrontend directory ->
-command: run
-or
-Go to Terminal in IntelliJ (bottom) -> change folder to mobileFrontend -> type "npm run"
-
-
+command: run or Go to Terminal in IntelliJ (bottom) -> change folder to mobileFrontend -> type "npm run"
 
 Start Backend:
 
