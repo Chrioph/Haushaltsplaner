@@ -22,3 +22,11 @@ form {
   float: left;
 }
 
+.balance {
+  font-size: 2em;
+}
+
+.balance-form {
+  margin: 1em;
+}
+

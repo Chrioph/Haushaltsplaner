@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Link, Route, Routes} from "react-router-dom";
 import WeeklyOverviewComponent from "./components/WeeklyOverviewComponent";
 import HouseholdOverviewComponent from "./components/HouseholdOverviewComponent";
 import ProfileOverviewComponent from "./components/ProfileOverviewComponent";
+import BalanceComponent from "./components/BalanceComponent";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/household" element={<HouseholdOverviewComponent/>}/>
                     <Route path="/profile" element={<ProfileOverviewComponent/>}/>
                     <Route path="/all-tasks" element={<Tasks/>}/>
+                    <Route path="/balance" element={<BalanceComponent/>}/>
                 </Routes>
             </Router>
         </>
