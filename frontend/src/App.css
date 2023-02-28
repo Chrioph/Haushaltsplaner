@@ -1,8 +1,43 @@
 .App {
     text-align: center;
+    font-family: "Berlin Sans FB",  serif;
+}
+
+.Link {
+    all: unset;
+}
+
+.Menu {
+    float: left;
+    height: 100%;
+    scale: 200%;
+    margin: 0.5em;
+}
+
+.Link:hover {
+    color: white;
 }
 
 .section {
     padding-top: 2em;
 }
 
+.Footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #53E3D4;
+    color: white;
+    text-align: center;
+}
+
+.Header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #53E3D4;
+    color: white;
+    text-align: center;
+}
