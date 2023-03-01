@@ -7,11 +7,14 @@
     all: unset;
 }
 
-.Menu {
+#composition-button {
     float: left;
-    height: 100%;
+}
+
+.Menu {
+    color: white;
+    margin:0.5em;
     scale: 200%;
-    margin: 0.5em;
 }
 
 .Link:hover {
